@@ -13,11 +13,42 @@
 
 ## Usage
 
-1. Download [variant].qbtheme [here](https://github.com/jorismertz/qbittorrent/tree/main/dist)
+### GUI
+
+1. Download [variant].qbtheme [here](https://github.com/rose-pine/qbittorrent/tree/main/dist)
 2. Open qBittorrent and go to `Tools` > `Preferences` > `Behavior` > `Interface`
    - Enable `Use custom UI theme`
    - Select the downloaded `.qbtheme` file
 3. Restart qBittorrent
+
+### WebUi
+
+The theme for the WebUI is only available via [theme.park](https://docs.theme-park.dev/themes/qbittorrent/) as a [community theme](https://docs.theme-park.dev/community-themes/).
+
+For all available installation methods, see
+[docs.theme-park.dev/setup](https://docs.theme-park.dev/setup/).
+
+For example, if you are using the `linuxserver/qbittorrent` Docker image:
+
+```yaml
+services:
+  qbittorrent:
+    image: lscr.io/linuxserver/qbittorrent:5.0.0
+    environment:
+      - DOCKER_MODS=ghcr.io/themepark-dev/theme.park:qbittorrent
+      - QBITTORRENT_VERSION=5.0.0
+      - TP_DOMAIN=develop.theme-park.dev # this can be removed once it's merged into master
+      - TP_COMMUNITY_THEME=true
+      - TP_THEME=rose-pine-{variant}
+```
+
+Alternatively, the theme can also be installed via the browser extension
+[Stylus](https://add0n.com/stylus.html). Create a new style in Stylus and add
+the following code:
+
+```css
+@import "https://develop.theme-park.dev/css/base/qbittorrent/catppuccin-{flavor}.css";
+```
 
 ## Gallery
 
@@ -32,5 +63,5 @@
 
 ## Thanks to
 
-- [catppuccin](https://github.com/catppuccin/) for the original theme
-- [jorismertz](https://github.com/jorismertz/) Rosé Pine port 
+- [juliamertz](https://github.com/juliamertz/)
+- [Catppuccin Org](https://github.com/catppuccin/)
