@@ -47,7 +47,7 @@ Alternatively, the theme can also be installed via the browser extension
 the following code:
 
 ```css
-@import "https://develop.theme-park.dev/css/base/qbittorrent/catppuccin-{flavor}.css";
+@import "https://develop.theme-park.dev/css/base/qbittorrent/rose-pine-{flavor}.css";
 ```
 
 ## Gallery
