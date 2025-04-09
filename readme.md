@@ -37,7 +37,6 @@ services:
     environment:
       - DOCKER_MODS=ghcr.io/themepark-dev/theme.park:qbittorrent
       - QBITTORRENT_VERSION=5.0.0
-      - TP_DOMAIN=develop.theme-park.dev # this can be removed once it's merged into master
       - TP_COMMUNITY_THEME=true
       - TP_THEME=rose-pine-{variant}
 ```
@@ -47,19 +46,8 @@ Alternatively, the theme can also be installed via the browser extension
 the following code:
 
 ```css
-@import "https://develop.theme-park.dev/css/base/qbittorrent/rose-pine-{flavor}.css";
+@import "https://theme-park.dev/css/base/qbittorrent/rose-pine-{flavor}.css";
 ```
-
-## Gallery
-
-#### Rosé Pine
-<img src="assets/main.webp" />
-
-#### Rosé Pine Moon
-<img src="assets/moon.webp" />
-
-#### Rosé Pine Dawn
-<img src="assets/dawn.webp" />
 
 ## Thanks to
 
